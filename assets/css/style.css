@@ -1,0 +1,80 @@
+body {
+    font-family: Montserrat;
+}
+
+.header {
+    background-color: #008e76;
+    color: white;
+    font-size: 18px;
+}
+
+.content {
+    background-size: cover;
+}
+
+.pic {
+    background-repeat: no-repeat;
+
+}
+
+.pic1 {
+    background-image: url(../img/pic1.jpg);
+    max-width: 1500px;
+    max-height: 1000px;
+}
+.pic2 {
+    background-image: url(../img/pic2.jpg);
+}
+
+.pic3 {
+    background-image: url(../img/pic3.jpg);
+}
+.pic4 {
+    background-image: url(../img/pic4.jpg);
+}
+.pic5 {
+    background-image: url(../img/pic5.jpg);
+}
+.pic6 {
+    background-image: url(../img/pic6.png);
+}
+
+
+.background2 {
+    background-color: rgba(0,0,0,0.35);
+    border-radius: 7px;
+    color: white;
+}
+
+h1 {
+
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+#scripture {
+    text-align: center;
+    font-size: 20px;
+}
+
+#reference {
+    font-weight: lighter;
+}
+
+h2 {
+    text-align: center;
+    color: #008e76;
+}
+
+.thoughts-on-todays-verse {
+    text-align: center;
+    background-color: rgba(0, 148, 118, 0.17);
+    font-size: 20px;
+}
+
+.footer {
+    background-color: #008e76;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
