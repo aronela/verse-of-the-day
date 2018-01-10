@@ -103,5 +103,13 @@ $(document).ready(function() {
             },
         });
     /*------------------slick--------------------*/
-    $('.pics').slick();
+    $('.pics').slick({
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        arrows: false,
     });
+});
