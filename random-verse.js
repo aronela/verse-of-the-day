@@ -1,7 +1,6 @@
-$(document).ready(function() {
-        var passages =
-            [
-                {
+$(document).ready(function () {
+    var passages = [
+        {
                     "name": "Matthew",
                     "nameRo": "Matei",
                     "chapters": [25, 23, 17, 25, 48, 34, 29, 34, 38, 42, 30, 50, 58, 36, 39, 28, 27, 35, 30, 34, 46, 46, 39, 51, 46, 75, 66, 20]
@@ -21,10 +20,9 @@ $(document).ready(function() {
                     "nameRo": "Ioan",
                     "chapters": [51, 25, 36, 54, 47, 71, 53, 59, 41, 42, 57, 50, 38, 31, 27, 33, 26, 40, 42, 31, 25]
                 }
-
-            ];
-
-        var book = Math.floor(Math.random() * passages.length);
+    ];
+    
+    var book = Math.floor(Math.random() * passages.length);
 
         var chapter = Math.floor(Math.random() * passages[book].chapters.length) + 1;
 
@@ -34,9 +32,8 @@ $(document).ready(function() {
         var p = passages[book].name + ' ' + chapter + ':' + verse;
 
         console.log(book, chapter, verse, p);
-
-
-        jQuery.ajax({
+    
+    jQuery.ajax({
             url: 'http://getbible.net/json',
             dataType: 'jsonp',
             data: 'passage=' + p + '&v=cornilescu',
@@ -99,7 +96,8 @@ $(document).ready(function() {
                 }
             },
             error: function () {
-                jQuery('#scripture').html('<h2>No scripture was returned, please try again!</h2>'); // <---- this is the div id we update
+                jQuery('#scripture').html('Pot totul în Hristos, care mă întăreşte.'); // <---- this is the div id we update
+                jQuery('#reference').html('Filipeni 4:13');
             },
         });
     /*------------------slick--------------------*/
@@ -113,3 +111,13 @@ $(document).ready(function() {
         arrows: false,
     });
 });
+
+if ('serviceWorker' in navigator) {
+    try {
+        navigator.serviceWorker.register('../sw.js');
+        console.log('SW registered');
+    }
+    catch(error) {
+        console.log('SW reg failed');
+    }
+}    
